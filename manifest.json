@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "DevFluig",
+    "description": "Extensão criada para auxiliar em algumas atividades de desenvolvimento, suporte e manutenção no Fluig.",
+    "version": "0.2.11",
+    "permissions": [ 
+        "unlimited_storage",
+        "notifications",
+        "contextMenus",
+        "cookies",
+        "storage",
+        "idle",
+        "tabs",
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}

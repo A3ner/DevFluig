@@ -1,0 +1,98 @@
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<link href="css/popup.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/mustache.js"></script>
+        <script src="js/injeta-mustache.js" ></script>
+        <script src="js/rest.js" ></script>
+	</head>
+	<body>
+        <div class="loader" style="display:none"></div>
+        <div class="loader-overlay" style="display:none"></div>
+        <div class="content">
+            <header>
+                <div class="col-xs-6">
+                <h3>Dev Fluig</h3>
+                </div>
+                <div class="col-xs-6" style="margin-top:  5px; margin-bottom:  5px;">
+                    <div class="col-xs-12 input-group">
+                        <input type="text" class="form-control number" placeholder="Abrir Solicitação" id="solicitacao" >
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="buscaSolicitacoes">
+                                <span class="glyphicon glyphicon-search" style="height: 20px;"></span>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="col-xs-12 input-group">
+                        <input type="text" class="form-control number" placeholder="Abrir Documento" id="documento" >
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="buscaDocumentos">
+                                <span class="glyphicon glyphicon-search" style="height: 20px;"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="wrapper" >
+                <div class="wrapper-panel">
+
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+                      <div class="panel panel-default page"  style="display:none" >
+                        <div class="panel-heading" role="tab" id="heading2">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                              Ações de Página
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                          <div class="panel-body" id="common-panel">
+                            ...
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <h3>created by the community and Abner :) [Versão BETA]</h3>
+            </footer>
+        </div>
+        
+        <script src="js/popup.js"></script>
+
+            <script type="text/html" id="template-collapse" >
+                <div class="panel panel-default page">
+                    <div class="panel-heading" role="tab" id="heading-{{id}}">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{id}}" aria-expanded="false" aria-controls="collapse-{{id}}">
+                          {{titulo}}
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse-{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{id}}">
+                      <div class="panel-body">
+                          <div class="col-xs-12" id="{{id}}-panel"></div>
+                          <div class="col-xs-12" id="{{id}}-content"></div>
+                      </div>
+                    </div>
+                  </div>
+            </script>
+
+            <script type="text/html" id="template-input-spanbutton">
+                <div class="input-group">
+                <input type="text" class="form-control" placeholder="{{placeholder}}" id="{{id}}" >
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="bt-{{id}}" >
+                        <span class="glyphicon glyphicon-search" style="height: 20px;" ></span>
+                    </button>
+                  </span>
+                </div>
+            </script>
+	</body>
+</html>
