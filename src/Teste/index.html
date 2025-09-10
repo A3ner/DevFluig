@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Workspace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #ddd;
+      display: flex;
+    height: 600px;
+    width: 450px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 80px;
+      background: #141414;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .sidebar i {
+      font-size: 20px;
+      margin: 20px 0;
+      color: #bbb;
+      cursor: pointer;
+    }
+
+    .sidebar i.active {
+      color: #fff;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #1e1e1e;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      padding: 10px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    .header .title {
+      font-weight: bold;
+    }
+
+    .header .buttons button {
+      background: #2d2d2d;
+      border: none;
+      color: #fff;
+      margin-left: 10px;
+      padding: 5px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .header .buttons button:hover {
+      background: #3d3d3d;
+    }
+
+    /* Search */
+    .search {
+      padding: 10px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 6px;
+      border-radius: 4px;
+      border: none;
+      background: #2d2d2d;
+      color: #ddd;
+    }
+
+    /* Collections */
+    .collections {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px 20px;
+    }
+
+    .collections .item {
+      padding: 8px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .collections .item i {
+      margin-right: 8px;
+      color: #bbb;
+    }
+
+    .collections .item:hover {
+      color: #fff;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 10px 20px;
+      border-top: 1px solid #333;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer span {
+      color: #bbb;
+      cursor: pointer;
+    }
+
+    .footer span:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <i class="fa-solid fa-layer-group active" title="Collections"></i>
+    <i class="fa-solid fa-gears" title="Environments"></i>
+    <i class="fa-solid fa-diagram-project" title="Flows"></i>
+    <i class="fa-solid fa-clock-rotate-left" title="History"></i>
+    <i class="fa-solid fa-table-cells" title="More"></i>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Header -->
+    <div class="header">
+      <div class="title">Abner Workspace</div>
+      <div class="buttons">
+        <button>New</button>
+        <button>Import</button>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="search">
+      <input type="text" placeholder="Search collections">
+    </div>
+
+    <!-- Collections -->
+    <div class="collections">
+      <div class="item"><i class="fa-solid fa-caret-right"></i> Athena</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> Banco Votorantim PROD</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> Centro Oeste API Protheus</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> Fluig Onco</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> New Collection</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> TEAM.PRIME.FLUIG.IO</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> Telemont</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> Testes</div>
+      <div class="item"><i class="fa-solid fa-caret-right"></i> TOTVS</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>Online</span>
+      <span>Find and replace</span>
+      <span>Console</span>
+    </div>
+  </div>
+</body>
+</html>

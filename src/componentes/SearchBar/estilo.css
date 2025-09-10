@@ -1,0 +1,31 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #2d2d2d;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  color: #ddd;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  background: #3d3d3d;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.search-bar button:hover {
+  background: #505050;
+}
